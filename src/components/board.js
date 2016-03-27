@@ -1,5 +1,4 @@
 // полотно с геометрическими фигурами. Отвечает за расположение фигур.
-
 import React, { Component } from 'react';
 import Shape from './shape';
 
@@ -45,6 +44,7 @@ export default class Board extends Component {
 
   render() {
     const { shapes, width, height } = this.props;
+    
     const style = {
       border: '1px solid gray',
       position: 'static',
