@@ -1,6 +1,7 @@
 # weblabs-problem
 
 Random shapes appear on the white board after clicking on it.
+Also try to resize the window!
 
 # Running
 ```
