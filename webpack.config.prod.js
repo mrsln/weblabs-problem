@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -22,6 +23,10 @@ module.exports = {
       compressor: {
         warnings: false
       }
+    }),
+    new HtmlWebpackPlugin({
+      title: 'weblabs problem',
+      template: 'index.html'
     })
   ],
   module: {
