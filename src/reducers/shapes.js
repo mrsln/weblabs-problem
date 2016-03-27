@@ -26,7 +26,7 @@ const shapes = (state = [] , action) => {
       return shapes;
 
     case DELETE_SHAPE:
-      return state.shapes.filter(shape => shape.id !== action.id);
+      return state.filter(shape => shape.id !== action.id);
 
     default:
       return state;
