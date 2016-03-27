@@ -1,4 +1,5 @@
 jest.unmock('../components/board');
+jest.unmock('../constants/shapes');
 
 jest.unmock('react');
 jest.unmock('react-dom');
@@ -7,7 +8,9 @@ jest.unmock('react-addons-test-utils');
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
+
 import Board from '../components/board';
+import Shapes from '../constants/shapes';
 
 describe('Board', () => {
   it('adds a shape', () => {
@@ -16,9 +19,16 @@ describe('Board', () => {
   const onDeleteShape = jest.genMockFunction();
   const width = 600;
   const height = 400;
-  const shapes = [{
-  
-  }];
+  const shapes = [
+    {
+      id: 0,
+      type: Shapes.CIRCLE,
+      size: 30,
+      x: 0.5,
+      y: 0.5,
+      color: 'green',
+    }
+  ];
   
   const board = TestUtils.renderIntoDocument(
     <Board shapes={[]} width={width} height={height} onAddShape={onAddShape} onDeleteShape={onDeleteShape} />
